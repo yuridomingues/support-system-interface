@@ -126,10 +126,7 @@ const handleDelete = async (id) => {
             </option>
           ))}
         </select>
-        <button type="submit">Criar Ticket</button>
-        <button type="submit">
-  {editingId ? "Atualizar Ticket" : "Criar Ticket"}
-</button>
+        <button type="submit">{editingId ? "Atualizar Ticket" : "Criar Ticket"}</button>
       </form>
 
       {/* Mensagens */}
