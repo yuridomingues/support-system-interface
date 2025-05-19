@@ -41,7 +41,7 @@ This is the frontend for the technical support system. The application allows yo
 ### Running with Vite (development mode)
 
 ```bash
-git clone https://github.com/your-username/support-system-interface.git
+git clone https://github.com/yuridomingues/support-system-interface.git
 cd support-system-interface
 npm install
 npm run dev
