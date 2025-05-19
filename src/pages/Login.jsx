@@ -1,10 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import api from "../services/api";
 
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+
+  const { setToken } = useAuth();
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -13,8 +18,8 @@ export default function Login() {
         username,
         password
       }));
-      localStorage.setItem("token", res.data.access_token);
-      window.location.href = "/clients";
+      setToken(res.data.access_token);
+      navigate("/clients");
     } catch (err) {
       setError("Usuário ou senha inválidos");
     }

@@ -5,8 +5,10 @@ import Tickets from "./pages/Tickets";
 import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
+  const token = localStorage.getItem("token");
+
   return (
-    <BrowserRouter>
+    <BrowserRouter key={token || "no-token"}>
       <Routes>
         <Route path="/" element={<Login />} />
 
