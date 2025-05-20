@@ -1,12 +1,61 @@
-# React + Vite
+# Support System Interface (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for the technical support system. The application allows you to register and manage **Clients** and **Support Tickets**, with an intuitive web interface, secure authentication, and integration with an API developed in FastAPI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- JWT authentication
+- Protected routes (PrivateRoute)
+- Client CRUD
+- CRUD for Tickets associated with clients
+- Fixed navbar with logout and quick navigation
+- Error message display in the interface
+- Integration with the API using Axios
+- Docker and Makefile for easy execution
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Technologies Used
+
+- [React.js](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [React Router DOM](https://reactrouter.com/)
+- [Axios](https://axios-http.com/)
+- [Docker](https://www.docker.com/)
+- Context API for authentication
+
+---
+
+## How to run locally
+
+### Prerequisites
+
+- Node.js 18
+- NPM
+- Docker (optional, recommended)
+
+---
+
+### Running with Vite (development mode)
+
+```bash
+git clone https://github.com/your-username/support-system-interface.git
+cd support-system-interface
+npm install
+npm run dev
+```
+Open in your browser: [http://localhost:5173](http://localhost:5173)
+
+---
+
+### Running with Docker + Makefile
+
+```bash
+make run
+
+```
+Open in your browser: [http://localhost:3000](http://localhost:3000)
+
+---
